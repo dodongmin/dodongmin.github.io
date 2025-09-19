@@ -27,12 +27,16 @@ const navItems = isActiveRoute
   <div
     class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
   >
-    <a href="/" aria-label="Go to home">
-      <Icon
-        name="logo"
-        class="h-6 cursor-pointer transition-all hover:text-mint-300"
-        aria-hidden="true"
-      />
+    <a href="/" aria-label="Go to home" class="flex items-center">
+      <span
+        class="h-6 cursor-pointer text-lg font-extrabold tracking-tight
+              bg-clip-text text-transparent
+              bg-linear-to-r from-gray-900 to-black
+              dark:from-gray-200 dark:to-white
+              hover:opacity-80 transition"
+      >
+        dodongmin
+      </span>
     </a>
 
     <Navigation items={navItems} />

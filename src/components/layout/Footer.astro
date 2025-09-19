@@ -32,8 +32,15 @@ const {
       class="relative h-6 cursor-pointer before:absolute before:left-1/2 before:top-1/2 before:h-full before:w-[40%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-[#50fd8f25] before:blur-3xl before:opacity-80 before:-z-1 hover:text-mint-500 transition-all [text-shadow:0_1px_2px_#000]"
     >
       <a href="/" aria-label="Return to homepage">
-        <!-- This icon represents the logo -->
-        <Icon name="logo" aria-hidden="true" />
+        <span
+          class="h-6 cursor-pointer text-lg font-extrabold tracking-tight
+                bg-clip-text text-transparent
+                bg-linear-to-r from-gray-900 to-black
+                dark:from-gray-200 dark:to-white
+                hover:opacity-80 transition"
+        >
+          dodongmin
+        </span>
       </a>
     </div>
     <div class="text-center">
@@ -41,9 +48,9 @@ const {
         href={github}
         class="flex items-center justify-center gap-3 text-base font-normal italic max-sm:text-sm"
         aria-label="About the website development"
-        ><Icon name="code" aria-hidden="true" /> Developed by <strong
+        ><Icon name="code" aria-hidden="true" /> <strong
           >{alias}</strong
-        >, with Astro</a
+        ></a
       >
     </div>
     <div
