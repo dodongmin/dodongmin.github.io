@@ -33,11 +33,11 @@ Developed with **Astro** and styled with **TailwindCSS**, NeonMint focuses on sp
 
 ## 🌐 Demo
 
-👉 [View live demo](https://github.com/EFEELE/NeonMint) 
+👉 [View live demo](https://github.com/dodongmin/NeonMint) 
 
 ## 🎯 Objective
 
 The purpose of NeonMint is to combine style and functionality in a clean interface that enhances content without overwhelming the user. It's an exercise in design and development focused on visual detail and user experience.
 
 
-🚀 *Developed by EFEELE.*
+🚀 *Developed by dodongmin.*

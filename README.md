@@ -101,14 +101,14 @@
 
    ### 🚀**Astro Installation**
    ```bash
-   npm create astro@latest -- --template EFEELE/neonmint
+   npm create astro@latest -- --template dodongmin/neonmint
    ```
    or
    ### 🔧**Manual Installation**
    
    #### Clone Repository
    ```bash
-   git clone https://github.com/EFEELE/NeonMint.git
+   git clone https://github.com/dodongmin/NeonMint.git
    ```
    #### Install Dependencies
    ```bash
@@ -224,8 +224,8 @@ The site is configured for deployment on Vercel, but can be deployed to any stat
 A huge thanks to all the amazing people who have contributed to this project!  
 Your time, effort, and ideas make this repository better every day. 💚  
 
-<a href="https://github.com/EFEELE/NeonMint/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=EFEELE/NeonMint" />
+<a href="https://github.com/dodongmin/NeonMint/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=dodongmin/NeonMint" />
 </a>
 
 ## 📄 License
