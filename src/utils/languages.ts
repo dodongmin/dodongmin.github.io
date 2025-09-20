@@ -1,14 +1,10 @@
 export interface Language {
   name: string;
-  iconName: string;
+  iconName?: string;
   className?: string;
 }
 
 export const languages: Record<string, Language> = {
-  angular: {
-    name: "Angular",
-    iconName: "angular",
-  },
   astro: {
     name: "Astro",
     iconName: "astro",
@@ -16,14 +12,6 @@ export const languages: Record<string, Language> = {
   bootstrap: {
     name: "Bootstrap",
     iconName: "bootstrap",
-  },
-  cloudflare: {
-    name: "Cloudflare",
-    iconName: "cloudflare",
-  },
-  html: {
-    name: "HTML 5",
-    iconName: "html",
   },
   javascript: {
     name: "JavaScript",
@@ -48,7 +36,6 @@ export const languages: Record<string, Language> = {
   },
   sass: {
     name: "Sass",
-    iconName: "sass",
   },
   git: {
     name: "Git",
@@ -58,17 +45,40 @@ export const languages: Record<string, Language> = {
     name: "Vercel",
     iconName: "vercel",
   },
-  windsurf: {
-    name: "Windsurf",
-    iconName: "windsurf-logo",
-  },
-  cursor: {
-    name: "Cursor",
-    iconName: "cursor-ia",
-  },
   python: {
     name: "Python",
     iconName: "python",
+  },
+  postgresql: {
+    name: "PostgreSQL",
+  },
+  linux: {
+    name: "Linux",
+  },
+  docker: {
+    name: "Docker",
+  },
+  prometheus: {
+    name: "Prometheus",
+  },
+  grafana: {
+    name: "Grafana",
+  },
+  mariadb: {
+    name: "MariaDB",
+  },
+  java: {
+    name: "Java",
+    iconName: "code",
+  },
+  aws: {
+    name: "AWS",
+  },
+  gcp: {
+    name: "GCP",
+  },
+  azure: {
+    name: "Azure",
   },
 };
 

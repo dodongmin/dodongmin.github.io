@@ -32,16 +32,21 @@ const sizeClasses = {
   md: "size-7",
 };
 
+// ✅ 항상 name이 있는 객체가 들어오도록 보장
 const selectedLanguage = getLanguage(lang);
 
+// 안전한 텍스트(폴백: 원본 키)
+const label = selectedLanguage?.name ?? lang;
+
 const getContainerClasses = () => {
-  const textSize = selectedLanguage.name.length > 10 ? "text-sm" : "text-base";
+  const textLen = label.length;
+  const textSize = textLen > 10 ? "text-sm" : "text-base";
   return `${baseClasses.container} ${textSize}`;
 };
 
 const getIconContainerClasses = () => {
   return `${baseClasses.iconContainer} ${sizeClasses[size]} max-lg:size-6 max-sm:size-5 ${
-    selectedLanguage.className ? selectedLanguage.className : ""
+    selectedLanguage?.className ?? ""
   }`;
 };
 ---
@@ -50,39 +55,28 @@ const getIconContainerClasses = () => {
   linkEnabled ? (
     <a
       class="cursor-pointer"
-      href={`/blog/techs/${lang}`}
-      aria-label={`View articles about ${selectedLanguage.name}`}
+      href={`/blog/techs/${encodeURIComponent(lang)}`}
+      aria-label={`View articles about ${label}`}
       role="link"
     >
-      <span
-        class={getContainerClasses()}
-        role="presentation"
-        aria-hidden="true"
-      >
-        <div
-          class={getIconContainerClasses()}
-          role="img"
-          aria-label={`${selectedLanguage.name} icon`}
-        >
-          <Icon class="w-full!" name={selectedLanguage.iconName} />
-        </div>
-        {selectedLanguage.name}
+      <span class={getContainerClasses()} role="presentation" aria-hidden="true">
+        {/* 아이콘을 쓰지 않을 땐 아래 블록 자체를 삭제해도 됩니다 */}
+        {selectedLanguage?.iconName ? (
+          <div class={getIconContainerClasses()} role="img" aria-label={`${label} icon`}>
+            <Icon class="w-full!" name={selectedLanguage.iconName} />
+          </div>
+        ) : null}
+        {label}
       </span>
     </a>
   ) : (
-    <span
-      class={`${getContainerClasses()} cursor-default`}
-      role="presentation"
-      aria-hidden="true"
-    >
-      <div
-        class={getIconContainerClasses()}
-        role="img"
-        aria-label={`${selectedLanguage.name} icon`}
-      >
-        <Icon class="w-full!" name={selectedLanguage.iconName} />
-      </div>
-      {selectedLanguage.name}
+    <span class={`${getContainerClasses()} cursor-default`} role="presentation" aria-hidden="true">
+      {selectedLanguage?.iconName ? (
+        <div class={getIconContainerClasses()} role="img" aria-label={`${label} icon`}>
+          <Icon class="w-full!" name={selectedLanguage.iconName} />
+        </div>
+      ) : null}
+      {label}
     </span>
   )
 }
