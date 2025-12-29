@@ -2,25 +2,26 @@
 import { Icon } from "astro-icon/components"
 
 interface Props {
-    iconName: string;
+    iconName?: string;
     link: string;
     label?: string;
 }
 
-const { iconName, link, label = `Link to ${iconName}` } = Astro.props;
+const { iconName, link, label = `Link to ${iconName || 'external site'}` } = Astro.props;
 
 // Validate required props
-if (!iconName || !link) {
-    throw new Error('Social component requires both iconName and link props');
+if (!link) {
+    throw new Error('Social component requires link prop');
 }
 ---
 
-<a 
-    class="hover:text-gray-400 hover:scale-150 transition-all" 
-    target="_blank" 
+<a
+    class="hover:text-gray-400 hover:scale-150 transition-all"
+    target="_blank"
     href={link}
     rel="noopener noreferrer"
     aria-label={label}
 >
-    <Icon name={iconName} aria-hidden="true" />
+    {iconName && <Icon name={iconName} aria-hidden="true" />}
+    {!iconName && <span>🔗</span>}
 </a>

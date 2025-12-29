@@ -2,12 +2,13 @@
 interface Props {
   title: string;
   company: string;
-  description: string;
+  description: string | string[];
   link?: string;
   date: string;
 }
 
 const { title, company, description, link, date } = Astro.props;
+const isArray = Array.isArray(description);
 ---
 
 <div
@@ -36,6 +37,14 @@ const { title, company, description, link, date } = Astro.props;
   <div
     class="flex flex-col gap-2 pb-4 text-zinc-00 dark:text-zinc-300 md:col-span-3"
   >
-    {description}
+    {isArray ? (
+      <ul class="list-disc list-inside space-y-2">
+        {description.map((item) => (
+          <li class="text-sm leading-relaxed">{item}</li>
+        ))}
+      </ul>
+    ) : (
+      <p>{description}</p>
+    )}
   </div>
 </div>

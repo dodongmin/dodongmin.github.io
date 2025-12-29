@@ -1,80 +1,36 @@
 ---
 layout: /src/layouts/MarkdownAbout.astro
-title: "정동민 | 백엔드 & DevOps"
-description: "PostgreSQL HA/VIP 장애조치, Prometheus·Grafana 모니터링 표준화, Docker 운영 자동화, 내부 RAG 에이전트 구축 경험을 가진 백엔드 & DevOps 엔지니어 정동민입니다."
-author: "정동민"
+title: "Backend & DevOps Engineer"
+description: "PostgreSQL HA(Pacemaker/VIP), 모니터링 표준화(Prometheus·Grafana), Docker 기반 운영 자동화 및 내부 RAG 검색 시스템 구축 경험 보유"
+author: ""
 image:
   url: "/images/efeeleprofile.webp"
-  alt: "정동민 프로필 이미지"
+  alt: "프로필 이미지"
 ---
 
-안녕하세요, **정동민**입니다.  
-**백엔드 & DevOps** 영역에서 시스템을 **안정적으로 운영**하고 **자동화로 반복을 줄이며**, 데이터와 검색을 활용해 **실행 가능한 제품**으로 이어지게 만드는 데 관심이 큽니다.  
-현재 **현업 (2024-04-24 ~ 재직)**에서 시스템 안정화와 운영 표준화, 모니터링 고도화, 내부 검색/RAG 에이전트 구축 등을 진행하고 있습니다.
-
----
-
-## 지금 하는 일 (요약)
-
-- **PostgreSQL HA**: Pacemaker+Corosync 기반 **VIP 페일오버**, Streaming Replication, **pgAgent 클러스터** 연동으로 **무중단 전환 체계** 마련  
-- **내부 RAG 에이전트**: **Milvus Dense + BM25 재점수화 + RRF**, **LangGraph 라우팅**으로 **사내 지식 검색·생성 자동화**  
-- **모니터링 표준화**: **Prometheus + Grafana** 기반 **알림**·**대시보드 표준** 수립  
-- **운영 자동화/표준화**: **Docker 백업 컨테이너**, **배포 스크립트** 정비
+**Backend & DevOps Engineer**
+PostgreSQL HA(Pacemaker/VIP), 모니터링 표준화(Prometheus·Grafana),
+Docker 기반 운영 자동화 및 내부 RAG 검색 시스템 구축 경험 보유
 
 ---
 
-## 대표 프로젝트
+## 주요 업무
 
-### 1) PostgreSQL 11 HA (Pacemaker + VIP)
-- **Pacemaker/Corosync**로 클러스터링, **VIP 전환**으로 **다운타임 최소화**
-- **Streaming Replication** 구성 및 **pgAgent 클러스터** 연동
-- 장애 시나리오별 **Failover Runbook** 수립
-
-### 2) Monitoring Stack 표준화
-- **Prometheus + Grafana**로 **지표/로그/알림** 파이프라인 정비
-- 팀 공통 **대시보드 표준** 정의, **Alert 규칙** 최적화(소음 ↓, 대응 속도 ↑)
-
-### 3) Infra 운영 자동화
-- **Docker 백업 컨테이너** 제작(주기/보존/암호화 정책 반영)
-- **배포/운영 스크립트** 표준화 & 문서화(SOP)로 **온보딩 시간 단축**
-
-### 4) 내부 RAG 에이전트
-- **Milvus(Dense Vector)** + **BM25** 결합 후 **RRF**로 재점수화(혼합 검색)
-- **LangGraph**로 **라우팅/제어 흐름** 구성, 프롬프트/컨텍스트 관리 자동화
+- Pacemaker + Corosync 기반 PostgreSQL HA 구성 및 운영
+- VIP 페일오버, Streaming Replication, pgAgent 클러스터 연동
+- Prometheus + Grafana 기반 모니터링 및 알림 체계 표준화
+- Docker 기반 백업 컨테이너 및 운영 스크립트 자동화
+- Milvus + BM25 + RRF 기반 내부 RAG 검색/응답 시스템 구축
 
 ---
 
-## 좋아하는 것들
+## 기술 스택
 
-- **관측성**: 문제를 “느낌”이 아니라 **데이터**로 말하게 하기  
-- **단순화**: 운영을 **한 줄의 명령**으로 만들기  
-- **지식화**: 반복 질문은 **문서/도구**로 없애기  
-- **커뮤니케이션**: 변경 사항은 **짧고 명확한 Change Log**로 공유하기
-
-취미는 **커피, 음악, 드라마, 보드게임**. 입니다. ☕
-
----
-
-## 함께 일하면 좋은 포인트
-
-- **장애 이전에** 대비합니다: 헬스체크·알림·리허설·런북  
-- **장애 이후에** 남깁니다: 포스트모템·재발 방지 액션·체크리스트  
-- **인프라/백엔드/데이터**가 만나는 지점을 좋아합니다: ETL·로그 파이프라인·검색/RAG
-
----
-
-## 앞으로
-
-- PostgreSQL HA/샤딩/백업 전략 고도화
-- 온프레미스/클라우드 혼합 환경에서의 **관측성 표준** 정교화
-- **RAG 에이전트**에 조직 지식 그래프 결합, **업무 자동화** 범위 확대
-
----
-
-### 연락
-
-- GitHub: [@dodongmin](https://github.com/dodongmin)  
-- 이메일: ghkandud@naver.com
-
-> 함께 **탄탄한 백엔드**와 **예측 가능한 운영**을 만들 사람/팀을 찾고 있습니다.  
-> 작은 PoC부터 운영 고도화까지, 필요한 지점을 짚어 **실행**으로 옮기겠습니다.
+- Database : PostgreSQL, MariaDB
+- HA / Cluster : Pacemaker, Corosync
+- Monitoring : Prometheus, Grafana, Alertmanager
+- Container / Orchestration : Docker, Docker Compose
+- Vector DB / Search : Milvus, BM25, RRF
+- AI / LLM : LangGraph, FastMCP, Ollama
+- Language : Python, Java, Shell Script
+- OS : Linux (Ubuntu, CentOS, Rocky Linux)

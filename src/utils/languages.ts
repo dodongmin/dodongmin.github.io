@@ -7,47 +7,37 @@ export interface Language {
 export const languages: Record<string, Language> = {
   astro: {
     name: "Astro",
-    iconName: "astro",
   },
   bootstrap: {
     name: "Bootstrap",
-    iconName: "bootstrap",
   },
   javascript: {
     name: "JavaScript",
-    iconName: "javascript",
   },
   mongo: {
     name: "MongoDb",
-    iconName: "mongo",
   },
   mysql: {
     name: "MySQL",
     className: "bg-[#f6ece1]!",
-    iconName: "mysql",
   },
   node: {
     name: "Node.js",
-    iconName: "node",
   },
   firebase: {
     name: "Firebase",
-    iconName: "firebase",
   },
   sass: {
     name: "Sass",
   },
   git: {
     name: "Git",
-    iconName: "git",
   },
   vercel: {
     name: "Vercel",
-    iconName: "vercel",
   },
   python: {
     name: "Python",
-    iconName: "python",
   },
   postgresql: {
     name: "PostgreSQL",
@@ -69,7 +59,6 @@ export const languages: Record<string, Language> = {
   },
   java: {
     name: "Java",
-    iconName: "code",
   },
   aws: {
     name: "AWS",
